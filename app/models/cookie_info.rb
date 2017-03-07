@@ -1,0 +1,2 @@
+class CookieInfo < ApplicationRecord
+end

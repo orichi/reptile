@@ -1,0 +1,24 @@
+.pagination-center{style:'text-align:center'}
+  = will_paginate @hash, :param_name => 'page', :previous_label => '上一页', :next_label => '下一页'
+- @hash.each do |hash|
+  %p
+    %b
+      名称
+    %span
+      = hash.name
+  %p
+    %b
+      价格
+    %span
+      = hash.price
+  %p
+    %b
+      规格
+    %span
+      = hash.spec
+  %p
+    %b
+      详情
+    %span
+      = hash.desc
+

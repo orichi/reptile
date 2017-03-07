@@ -1,0 +1,15 @@
+%p 分类列表
+%table
+  %thead
+    %th 分类名称
+    %th 分类产品数量
+    -#%th 分类链接
+  %tbody
+    - @data.each do |data|
+      %tr
+        %td
+          = data.name
+        %td
+          = link_to data.count, reptiles_path(id: data.id), title: data.link
+        -#%td
+        -#  = value[:link]
